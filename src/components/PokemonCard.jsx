@@ -1,27 +1,22 @@
 // import "./App.css";
 // import pokemonCard from "./components/pokemonCard"
 
-function PokemonCard() {
+function PokemonCard(props) {
+  console.log(props)
+// const pokemon = pokemonList[1]
 
-const pokemon = pokemonList[1]
-  
 return (
   <figure>
-    {pokemon.imgSrc !== undefined ? <img src={pokemon.imgSrc}></img> : <p>???</p>}
-    <figcaption>{pokemon.name}</figcaption>
+    {props.pokemon.imgSrc !== undefined ? <img src={props.pokemon.imgSrc}></img> : <p>???</p>}
+    <figcaption>{props.pokemon.name}</figcaption>
   </figure>
 )
+
 } 
 
-  const pokemonList = [
-    {
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
+
+
+
+  
   
   export default PokemonCard;
