@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import PokemonCard from './components/PokemonCard'
+import NavBar from './components/NavBar';
 import './App.css'
 
 const pokemonList = [
@@ -31,30 +32,14 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0)
 
-  const handleBeforeClick = () => {
-    if (pokemonIndex > 0) {
-      setPokemonIndex(pokemonIndex - 1)
-    }
-  }
-  const handleNextClick = () => {
-    setPokemonIndex(pokemonIndex +1)
-  }
-
 
   return (
-    
-      <div>
-      <PokemonCard pokemon={pokemonList [pokemonIndex]} />
-      {pokemonIndex > 0 && <button onClick={handleBeforeClick} > Précédent </button> }
-      {pokemonIndex < pokemonList.length - 1 && <button onClick={handleNextClick}> Suivant </button>}
-
-    {/* {pokemonIndex !== 0 && <button onClick={handleBeforeClick} > Précédent </button> }
-    {pokemonIndex !== pokemonList.length - 1 && <button onClick={handleNextClick}> Suivant </button>} 
-     fonctionne aussi avec !== */}
-      </div>
+    <div>
+      <PokemonCard pokemon ={pokemonList[pokemonIndex]}/>
+      <NavBar pokemonIndex= {pokemonIndex} pokemonList={pokemonList} setPokemonIndex={setPokemonIndex} />
+    </div>
   )
 }
-
 
 export default App
 
