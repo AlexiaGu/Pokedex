@@ -2,6 +2,7 @@
 // import pokemonCard from "./components/pokemonCard"
 
 import PropTypes from "prop-types"
+import NavBar from "./NavBar"
 
 PokemonCard.propTypes = {
   pokemon : PropTypes.shape ({
