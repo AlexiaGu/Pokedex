@@ -10,6 +10,12 @@ const handleButton = (index) => {
   setPokemonIndex(index)
 }
 
+if (pokemonIndex === 3) {
+  alert('pika pikachu !!!');
+}
+
+
+
 return (
     
     <div>
@@ -23,13 +29,7 @@ return (
      
     }
   </div>
-)
-
- 
- 
-
- 
-    
+)    
   }
 
 export default NavBar;
